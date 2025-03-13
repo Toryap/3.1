@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Powered Delivery</title>
+  <style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  text-align: center;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-weight: 400;
+  font-size: 24px;
+  color: #555;
+}
+
+.subheading {
+  font-weight: 700;
+  font-size: 32px;
+  color: #2e2e3a;
+  margin-top: 10px;
+}
+
+.description {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    ". teambuilder ."
+    "supervisor karma calculator"
+    ". karma .";
+  gap: 30px;
+  place-items: center;
+  margin-top: 60px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  position: relative;
+  transition: transform 0.2s ease;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.icon {
+  align-self: flex-end;
+  width: 50px;
+  height: 50px;
+}
+
+.icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card.teal::before {
+  background-color: #00cfd5;
+}
+
+.card.red::before {
+  background-color: #ff5f5f;
+}
+
+.card.blue::before {
+  background-color: #2d9cdb;
+}
+
+.card.yellow::before {
+  background-color: #f2c94c;
+}
+
+.card.teal {
+  grid-area: supervisor;
+  transform: translateY(-50px); 
+}
+
+.card.red {
+  grid-area: teambuilder;
+}
+
+.card.blue {
+  grid-area: calculator;
+  transform: translateY(-50px); 
+}
+
+.card.yellow {
+  grid-area: karma;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+    transform: none; 
+  }
+}
+
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="heading">Reliable, efficient delivery</h2>
+    <h1 class="subheading">Powered by Technology</h1>
+    <p class="description">
+      Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful
+    </p>
+
+    <div class="cards">
+      <div class="card teal">
+        <h3>Supervisor</h3>
+        <p>Monitors activity to identify project roadblocks</p>
+        <div class="icon">
+          <img src="turquoise.png" alt="Supervisor Icon">
+        </div>
+      </div>
+
+      <div class="card red center">
+        <h3>Team Builder</h3>
+        <p>Scans our talent network to create the optimal team for your project</p>
+        <div class="icon">
+          <img src="red.png" alt="Team Builder Icon">
+        </div>
+      </div>
+
+      <div class="card blue">
+        <h3>Calculator</h3>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+        <div class="icon">
+          <img src="blue.png" alt="Calculator Icon">
+        </div>
+      </div>
+
+      <div class="card yellow bottom-center">
+        <h3>Karma</h3>
+        <p>Regularly evaluates our talent to ensure quality</p>
+        <div class="icon">
+          <img src="yellow.png" alt="Karma Icon">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
